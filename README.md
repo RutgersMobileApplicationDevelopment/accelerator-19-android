@@ -2,7 +2,7 @@
 
 These are the materials for the Android Track of the Accelerator. Feel free to use this as a guide for learning Android Development. Learn more about our Accelerator program on [our website](https://rumad.club/accelerator.html).
 
-# What's in this repository?
+## What's in this repository?
 
 This repo contains material corresponding to each week of the program. For example, all the material that was covered in Week 1 can be found in the "Week 1" folder.
 
