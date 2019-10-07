@@ -33,24 +33,31 @@ class MainActivity : AppCompatActivity() {
         Log.d(tag, "onCreate called")
 
         /*
-        We're passing a lambda as the argument to setOnClickListener().
-        See https://kotlinlang.org/docs/reference/lambdas.html for more about lambdas in Kotlin.
+        We're using a couple of Kotlin features here:
+
+        1. click_me_button is an extension property of Activity, generated based on our XML code.
+           See https://kotlinlang.org/docs/tutorials/android-plugin.html#view-binding
+           for an explanation.
+
+        2. We're passing a lambda as the argument to setOnClickListener().
+           See https://kotlinlang.org/docs/reference/lambdas.html for more about lambdas in Kotlin.
         */
         click_me_button.setOnClickListener {
             /*
             When the button is clicked, we increment numClicks, and then set the text in
-            our TextView to reflect this number.
+            our TextView to reflect the new number.
             */
 
             /*
-            We're using a few more neat Kotlin features in here.
+            We're using some more neat Kotlin features here.
 
-            1. number_of_clicks_text is an extension property of Activity, generated based on our
-               XML code. See https://kotlinlang.org/docs/tutorials/android-plugin.html#view-binding
-               for an explanation.
+            1. number_of_clicks_text is another extension property of Activity,
+               just like click_me_button.
 
-            2. When we assign a value to the "text" property, under the hood it's calling the method
-               setText(). See https://kotlinlang.org/docs/reference/java-interop.html#getters-and-setters
+            2. When we assign a value to the "text" property, under the hood it's actually calling
+               the method setText(). If you Ctrl-click on this property, Android Studio will show
+               you where setText() is defined. See
+               https://kotlinlang.org/docs/reference/java-interop.html#getters-and-setters
                for an explanation.
 
             3. The "$numClicks" is called a "template expression". See
