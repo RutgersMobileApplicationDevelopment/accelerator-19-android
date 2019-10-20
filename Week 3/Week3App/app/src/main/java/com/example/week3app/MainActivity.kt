@@ -14,8 +14,14 @@ class MainActivity : AppCompatActivity() {
         val potatoFragment = PotatoFragment()
         val pineappleFragment = PineappleFragment()
 
-        // Each time we click one of these two buttons, we do a fragment transaction to
-        // replace what's in the FrameLayout with a particular fragment
+        /**
+         * Each time we click one of these two buttons, we do a fragment transaction to
+         * replace what's in the FrameLayout with a particular fragment.
+         *
+         * Calling addToBackStack(null) adds the transaction to the backstack so that it can be
+         * reversed later on. If you press your device's back button, it will reverse the
+         * latest transaction on the back stack.
+        */
 
         button_potato.setOnClickListener {
             supportFragmentManager.beginTransaction()
