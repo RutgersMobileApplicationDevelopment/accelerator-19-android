@@ -13,7 +13,7 @@ class PokemonRepository {
         /**
          * The response from the API will be in JSON, but we need to translate the responses to
          * instances of Java/Kotlin classes. This line tells Retrofit that we want to use
-         * Google's GSON library to deserialize these responses.
+         * Google's Gson library to deserialize these responses.
          */
         .addConverterFactory(GsonConverterFactory.create())
         .build()
