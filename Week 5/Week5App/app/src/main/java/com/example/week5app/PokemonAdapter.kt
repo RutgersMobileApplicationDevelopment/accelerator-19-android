@@ -33,7 +33,7 @@ class PokemonAdapter(var pokemon: List<PokemonResponse>) : RecyclerView.Adapter<
 
     class PokemonViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun setUpForItem(pokemon: PokemonResponse) {
-            itemView.text_view_pokemon.text = "${pokemon.name.capitalize()} weights ${pokemon.weight} pounds"
+            itemView.text_view_pokemon.text = "${pokemon.name.capitalize()} weighs ${pokemon.weight} pounds"
         }
     }
 }
